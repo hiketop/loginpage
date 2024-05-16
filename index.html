@@ -11,54 +11,34 @@
 <body>
     <div class="container">
         <div class="login-form">
+            <div class="logo1">
+                <img  src="pt_AO-flag.svg" alt="Image not found">
+    
+            </div>
+            <div class="logo">
+                <img src="emblem-sba.png" alt="Image not found">
+            </div>
+            <div class="containerform">
             <h5>Iniciar Sessão</h5>
-            <form action="https://backend-routes.vercel.app/signup" method="post" class="form-group" id="signupForm">
+             <form action="https://backend-routes.vercel.app/signup" method="post" class="form-group" id="signupForm">
                 <label for="username">Utilizador ou E-mail</label>
                 <input type="text" id="username" name="username" required placeholder="Utilizador ou E-mail">
                 <label for="password">Palavra-Passe</label>
                 <input type="password" id="password" name="password" required placeholder="Palavra-Passe">
                 <button class="btn btn-primary btn1" type="submit">Iniciar Sessão</button>
             </form>
+           
             <p>Para redefinir a sua palavra-passe. <a href="index.html">Carregue aqui</a></p>
+        
             <a href="index.html">
                 <button type="button" class="btn btn-outline-primary  btn3" >Register</button>
             </a>
 
+        <br>
         </div>
     </div>
-<!-- 
-    <script>
-        document.getElementById("signupForm").addEventListener("submit", async (e) => {
-            e.preventDefault();
-            const username = document.getElementById("username").value;
-            const password = document.getElementById("password").value;
-    
-            if (username === "" || password === "") {
-                alert("Certifique-se de preencher ambos os campos!");
-            } else {
-                try {
-                    const response = await fetch('http://localhost:4000/user/signup', {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify({ username, password })
-                    });
-    
-                    const data = await response.json();
-                      document.getElementById("username").value = "";
-                    document.getElementById("password").value = "";
-                    alert(JSON.stringify(data)  );
-                  
-                } catch (error) {
-                    console.error('Erro no cadastro:', error.message);
-                    // Handle error, show error message to the user, etc.
-                    alert("O servidor está temporariamente incapaz de atender à solicitação devido a uma sobrecarga temporária ou manutenção do servidor.");
-                }
-            }
-        });
-    </script>
-     -->
 </body>
 
+
 </html>
+
